@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/api/zip-codes/{zipcodeid}', 'ZipCodesController@show')->where('zipcodeid', '[0-9]+');
